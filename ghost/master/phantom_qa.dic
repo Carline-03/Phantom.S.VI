@@ -1,0 +1,14 @@
+﻿OnSelect
+{
+	case reference0
+	{
+		when "starA1"
+		{
+			"\t\0\s[13]\1\s[-1]\b[2]（）\w9\w9\![open,inputbox,OnTeachnameFirst,-1]\e"
+		}
+		when "starA2"
+		{
+			"\t\1\s[-1]\b[2]（稍微先做一個自我介紹好了……）\![open,inputbox,OnTeachnameFirst,-1]\e"
+		}
+	}
+}

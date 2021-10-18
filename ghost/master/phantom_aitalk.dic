@@ -1,0 +1,88 @@
+﻿OnChoiceSelect
+{
+	EVAL("Select.%(reference0)")
+}
+OnAiTalk
+{
+	love += 2
+	if CHAIN.IDName != "" 
+	{
+		//有連瑣ID存在時則為連瑣對話
+		lastTalk = ChainTalk
+		lastTalk
+	}
+	else
+	{
+		if click >=10 && story ==3 && love>=500
+		{
+			"\0\t【小斯巴达身上的元力印记逐渐变得明显。】\n/
+			【一股熟悉的力量从玩偶的体内涌现出来——】\n/
+			【正在尝试重新连接——】\n/
+			\s[16]【5】\c【4】\c【3】\c【2】\c【１】\w9\w9\c[0]【重启完毕。】\n/
+			【系统提示】: Phantom.S请求添加您为好友\n\n/
+
+			\__q[Onstory4,通过]☆通过\__q"
+		}
+		elseif story ==2 && love>=500
+		{
+			"\0\t\s[2]金醒来了，他的身体并没有什么大碍。\w9\w9\c/
+			\0\s[呼、总算放下心了……\n/
+			\s[2]但是下一场比赛要开始了……\n\n/
+
+			\__q[Onstory3,你的语气很沉闷]☆你的语气很沉闷，这几天发生什么事情了吗\__q\e"
+		}
+		elseif story ==1 && love>=400
+		{
+			"\0\t【……】\n/
+			\1\s[51]裁判球提醒您，\n/
+			您已经和参赛者成为挚友，\n/
+			实时通话功能已经开启！\n/
+			你收到了紫堂幻的语音通讯请求\n\n/
+
+			\__q[Onstory2,接受]☆接受\__q\n/
+			\__q[Onstory2,拒绝]☆拒绝\__q\e"
+		}
+		elseif story ==0 && love>=300
+		{
+			"\0\t\s[3]………………\w9\w9\c…………抱歉，%(username)，\n/
+			我来晚了。今天也会努力完成工作的，您的电脑就交给我吧。\n\n/
+
+			\__q[Onstory1,这是发生什么了]☆这是发生什么了，你看起来很低落\__q"
+		}
+		elseif mode == 7
+		{
+			lastTalk = Talk7
+			lastTalk
+		}
+		elseif mode == 6
+		{
+			lastTalk = Talk6
+			lastTalk
+		}
+		elseif mode == 5
+		{
+			lastTalk = Talk5
+			lastTalk
+		}
+		elseif mode == 4
+		{
+			lastTalk = Talk4
+			lastTalk
+		}
+		elseif mode == 3
+		{
+			lastTalk = Talk3
+			lastTalk
+		}
+		elseif mode == 2
+		{
+			lastTalk = Talk2
+			lastTalk
+		}
+		else
+		{
+			lastTalk = Talk
+			lastTalk
+		}
+	}
+}

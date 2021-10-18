@@ -1,0 +1,14 @@
+﻿charset,UTF-8
+
+craftman,-
+craftmanw,2020紫堂幻生贺制作组
+craftmanurl,-
+
+name,紫堂幻
+type,ghost
+
+sakura.name,紫堂幻
+kero.name,裁判球
+
+icon,hbps.ico
+shiori,satori.dll

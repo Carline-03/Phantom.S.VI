@@ -1,0 +1,210 @@
+﻿OnTranslate
+{ 
+	_txt = reference0
+   	if fjswitch == 0
+	{
+   	_txt = FUNCTIONEX("ChConverter.dll", "simplified", _txt) //簡體化
+   	}
+	--
+	_txt = REPLACE(_txt,"普通：","\0\s[0]")
+//	_txt = REPLACE(_txt,"User","%(username)")
+	_txt
+}
+
+//**** 轉譯 ***************************************************************************************
+//如果只是简单地制作人格，不想那么麻烦的话，可以使用下面这段，只要你懂怎么用。当然用了的话请保留作者信息，再怎么说还是觉得……很苦逼啊请体谅我一点！
+
+//转换规则Ver globaldefine 1.0.4 by 无良作者（AccVeronica）
+//日期：2012年3月17日
+//效用：能规范使用中文标点的人无需再在脚本内插入标点停顿。如有特别需要临时补上差值即可。
+//如果Ontranslate无法使用，可以考虑尝试将下面的指令放在辞书适当的位置，参看yaya.txt。
+//如果只希望对特定的一段执行操作，请将#globaldefine【全部替换】为#define，放在特定辞书的前方（同一个dic或别的什么内），作用范围是下面开始直到特定辞书结束
+//仅用于规范中文标点符号，如果需要写英文的句子请自己做好停顿
+//波浪号是全角，呻吟号【其实是英文的波浪号= =】不在其中谢谢
+//显然，请不要和带有下面标点的颜文字共同使用
+//备注：此脚本替换辞书所有在这之后读取的内容，使用的话不能在后方选项中带有中文标点，会导致显示不正常、选项显示的延迟以及\_q指令的破坏。
+//      因此，有带标点的选项之类，请把所有不需要调整的项目放在这段脚本的前面，必要的话参看yaya.txt。
+
+//一次：初步调整
+#globaldefine	、				、\w8
+#globaldefine	，				，\w8\w4
+#globaldefine	。				。\w8\w8\w8
+#globaldefine	～				～\w8\w8\w8
+#globaldefine	！				！\w8\w8\w4
+#globaldefine	：				：\w8\w8
+#globaldefine	；				；\w8\w8
+#globaldefine	……			…\w4…\w8\w8
+#globaldefine	？				？\w8\w8\w8
+#globaldefine	——			——\w8\w8
+#globaldefine	「				\w2「
+#globaldefine	『				\w2『
+#globaldefine	」				」\w2
+#globaldefine	』				』\w2
+#globaldefine	‘				\w2‘
+#globaldefine	“				\w2“
+#globaldefine	’				’\w2
+#globaldefine	”				”\w2
+#globaldefine	《				\w2《
+#globaldefine	〈				\w2〈
+#globaldefine	》				》\w2
+#globaldefine	〉				〉\w2
+
+//二次：格式补正
+//话说……五个感叹号这种东西我至今只在马克·吐温作品集见到过呢……
+//可能的话，请记住叹号和问号的规范用法绝对没有双数个的。至于喜欢打它一长串的我就不管了= =
+#globaldefine	！\w8\w8\w4！\w8\w8\w4！\w8\w8\w4！\w8\w8\w4！		！！！！！
+#globaldefine	？\w8\w8\w8？\w8\w8\w8？		？？？
+#globaldefine	！\w8\w8\w4！\w8\w8\w4！		！！！
+#globaldefine	？\w8\w8\w8？\w8\w8\w8！		？？！
+#globaldefine	！\w8\w8\w4！\w8\w8\w4？		！！？
+#globaldefine	？\w8\w8\w8！\w8\w8\w4！		？！！
+#globaldefine	！\w8\w8\w4？\w8\w8\w8？		！？？
+#globaldefine	？\w8\w8\w8？		？？
+#globaldefine	！\w8\w8\w4！		！！
+#globaldefine	？\w8\w8\w8！		？！
+#globaldefine	！\w8\w8\w4？		！？
+#globaldefine	？\w8\w8\w8）		？）\w8\w8\w8
+#globaldefine	！\w8\w8\w4）		！）\w8\w8\w4
+#globaldefine	。\w8\w8\w8）		。）\w8\w8\w8
+#globaldefine	～\w8\w8\w8）		～）\w8\w8\w8
+#globaldefine	：\w8\w8）			：）\w8\w8
+#globaldefine	；\w8\w8）			；）\w8\w8
+#globaldefine	…\w8\w8）			…）\w8\w8
+#globaldefine	—\w8\w8）			—）\w8\w8
+#globaldefine	～\w8\w8\w8～		～～
+#globaldefine	（\w2「				\w2（「
+#globaldefine	（\w2『				\w2（『
+#globaldefine	（\w2‘				\w2（‘
+#globaldefine	（\w2“				\w2（“
+#globaldefine	」\w2）				」）\w2
+#globaldefine	』\w2）				』）\w2
+#globaldefine	’\w2）				’）\w2
+#globaldefine	”\w2）				”）\w2
+#globaldefine	？\w8\w8\w8】		？】\w8\w8\w8
+#globaldefine	！\w8\w8\w4】		！】\w8\w8\w4
+#globaldefine	～\w8\w8\w8】		～】\w8\w8\w8
+#globaldefine	…\w8\w8】			…】\w8\w8
+#globaldefine	—\w8\w8】			—】\w8\w8
+#globaldefine	【\w2「				\w2【「
+#globaldefine	【\w2『				\w2【『
+#globaldefine	【\w2‘				\w2【‘
+#globaldefine	【\w2“				\w2【“
+#globaldefine	」\w2】				」】\w2
+#globaldefine	』\w2】				』】\w2
+#globaldefine	’\w2】				’】\w2
+#globaldefine	”\w2】				”】\w2
+#globaldefine	？\w8\w8\w8〗		？〗\w8\w8\w8
+#globaldefine	！\w8\w8\w4〗		！〗\w8\w8\w4
+#globaldefine	～\w8\w8\w8〗		～〗\w8\w8\w8
+#globaldefine	…\w8\w8〗			…〗\w8\w8
+#globaldefine	—\w8\w8〗			—〗\w8\w8
+#globaldefine	〖\w2「				\w2〖「
+#globaldefine	〖\w2『				\w2〖『
+#globaldefine	〖\w2‘				\w2〖‘
+#globaldefine	〖\w2“				\w2〖“
+#globaldefine	」\w2〗				」〗\w2
+#globaldefine	』\w2〗				』〗\w2
+#globaldefine	’\w2〗				’〗\w2
+#globaldefine	”\w2〗				”〗\w2
+#globaldefine	？\w8\w8\w8〉		？〉
+#globaldefine	！\w8\w8\w4〉		！〉
+#globaldefine	～\w8\w8\w8〉		～〉
+#globaldefine	…\w8\w8〉			…〉
+#globaldefine	—\w8\w8〉			—〉
+#globaldefine	〈\w2				〈
+#globaldefine	《\w2				《
+#globaldefine	」\w2〉				」〉
+#globaldefine	』\w2〉				』〉
+#globaldefine	’\w2〉				’〉
+#globaldefine	”\w2〉				”〉
+#globaldefine	？\w8\w8\w8》		？》
+#globaldefine	！\w8\w8\w4》		！》
+#globaldefine	～\w8\w8\w8》		～》
+#globaldefine	…\w8\w8》			…》
+#globaldefine	—\w8\w8》			—》
+#globaldefine	」\w2》				」》
+#globaldefine	』\w2》				』》
+#globaldefine	’\w2》				’》
+#globaldefine	”\w2》				”》
+#globaldefine	〉\w2》				〉》
+#globaldefine	“\w2‘				“‘
+#globaldefine	’\w2”				’”
+#globaldefine	、\w8’\w2				、’\w8
+#globaldefine	，\w8\w4’\w2			，’\w8\w4
+#globaldefine	。\w8\w8\w8’\w2		。’\w8\w8\w8
+#globaldefine	～\w8\w8\w8’\w2		～’\w8\w8\w8
+#globaldefine	！\w8\w8\w4’\w2		！’\w8\w8\w4
+#globaldefine	：\w8\w8’\w2			：’\w8\w8
+#globaldefine	；\w8\w8’\w2			；’\w8\w8
+#globaldefine	…\w8\w8’\w2			…’\w8\w8
+#globaldefine	？\w8\w8\w8’\w2		？’\w8\w8\w8
+#globaldefine	—\w8\w8’\w2			—’\w8\w8
+#globaldefine	、\w8”	\w2				、”\w8
+#globaldefine	，\w8\w4”\w2			，”\w8\w4
+#globaldefine	。\w8\w8\w8”\w2		。”\w8\w8\w8
+#globaldefine	～\w8\w8\w8”\w2		～”\w8\w8\w8
+#globaldefine	！\w8\w8\w4”\w2		！”\w8\w8\w4
+#globaldefine	：\w8\w8”\w2			：”\w8\w8
+#globaldefine	；\w8\w8”\w2			；”\w8\w8
+#globaldefine	…\w8\w8”\w2			…”\w8\w8
+#globaldefine	？\w8\w8\w8”			？”\w8\w8\w8
+#globaldefine	—\w8\w8”				—”\w8\w8
+#globaldefine	、\w8」\w2				、」\w8
+#globaldefine	，\w8\w4」\w2			，」\w8\w4
+#globaldefine	。\w8\w8\w8」\w2		。」\w8\w8\w8
+#globaldefine	～\w8\w8\w8」\w2		～」\w8\w8\w8
+#globaldefine	！\w8\w8\w4」\w2		！」\w8\w8\w4
+#globaldefine	：\w8\w8」\w2			：」\w8\w8
+#globaldefine	；\w8\w8」\w2			；」\w8\w8
+#globaldefine	…\w8\w8」\w2			…」\w8\w8
+#globaldefine	？\w8\w8\w8」\w2		？」\w8\w8\w8
+#globaldefine	—\w8\w8」\w2			—」\w8\w8
+#globaldefine	、\w8』\w2				、』\w8
+#globaldefine	，\w8\w4』\w2			，』\w8\w4
+#globaldefine	。\w8\w8\w8』\w2		。』\w8\w8\w8
+#globaldefine	～\w8\w8\w8』\w2		～』\w8\w8\w8
+#globaldefine	！\w8\w8\w4』\w2		！』\w8\w8\w4
+#globaldefine	：\w8\w8』\w2			：』\w8\w8
+#globaldefine	；\w8\w8』\w2			；』\w8\w8
+#globaldefine	…\w8\w8』\w2			…』\w8\w8
+#globaldefine	？\w8\w8\w8』\w2		？』\w8\w8\w8
+#globaldefine	—\w8\w8』\w2		——』\w8\w8
+#globaldefine	》\w2《				》\w8《
+#globaldefine	〉\w2〈				〉\w8〈
+#globaldefine	：\w8\w8\w2“		：\w8\w8“
+#globaldefine	：\w8\w8\w2『		：\w8\w8『
+#globaldefine	：\w8\w8\w2「		：\w8\w8「
+#globaldefine	，\w8\w4\w2“		，\w8\w4“
+#globaldefine	，\w8\w4\w2『		，\w8\w4『
+#globaldefine	，\w8\w4\w2「		，\w8\w4「
+#globaldefine	。\w8\w8\w8\w2“	。\w8\w8\w8“
+#globaldefine	。\w8\w8\w8\w2『	。\w8\w8\w8『
+#globaldefine	。\w8\w8\w8\w2「	。\w8\w8\w8「
+#globaldefine	…\w8\w8…\w4		…\w4…
+#globaldefine	\w2、				、
+#globaldefine	\w2，				，
+#globaldefine	\w2。				。
+#globaldefine	\w2～				～
+#globaldefine	\w2！				！
+#globaldefine	\w2：				：
+#globaldefine	\w2；				；
+#globaldefine	\w2…				…
+#globaldefine	\w2？				？
+#globaldefine	\w2—				—
+#globaldefine	\w8\w2				\w8
+#globaldefine	\w4\w2				\w4
+
+//秋澤表示：無良你沒有寫呻吟號（那啥英文波浪號）對吾輩來說實在不方便神馬的……於是自己給加上了
+#globaldefine	~				~\w8\w8\w8
+#globaldefine	~\w8\w8\w8）		~）\w8\w8\w8
+#globaldefine	~\w8\w8\w8~		~~
+#globaldefine	~\w8\w8\w8】		~】\w8\w8\w8
+#globaldefine	~\w8\w8\w8〗		~〗\w8\w8\w8
+#globaldefine	~\w8\w8\w8〉		~〉
+#globaldefine	~\w8\w8\w8》		~》
+#globaldefine	~\w8\w8\w8’\w2		~’\w8\w8\w8
+#globaldefine	~\w8\w8\w8”\w2		~”\w8\w8\w8
+#globaldefine	~\w8\w8\w8」\w2		~」\w8\w8\w8
+#globaldefine	~\w8\w8\w8』\w2		~』\w8\w8\w8
+#globaldefine	\w2~				~
+#globaldefine	·				·\w8\w4

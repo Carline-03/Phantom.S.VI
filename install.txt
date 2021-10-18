@@ -1,0 +1,5 @@
+﻿charset, UTF-8
+type,ghost
+name,冰月
+directory,koutsuki
+homeurl,http://conieloury.weebly.com
