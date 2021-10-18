@@ -1,9 +1,1 @@
-﻿ghost/master/satori_savebackup.txt,nonar
-ghost/master/satori_savedata.txt,nonar
-ghost/master/yaya_variable.cfg,nonar
-ghost/master/profile/ghost.dat,nonar
-ghost/master/profile/history.dat,nonar
-ghost/master/profile/var.txt,nonar
-shell/master/profile/shell.dat,nonar
-ghost/master/profile/ghost.dat.bak,nonar
-shell/master/profile/shell.dat.bak,nonar
+﻿ghost/master/shiori/yaya_variable.cfg,noupdate,nonar
