@@ -8,30 +8,8 @@ charset.extension, default
 
 messagetxt, simplified-chinese.txt
 
-//---- 系统辞书 ---------------------------------------------------------------------
-dic, yaya_config.dic			// 文 ver.3 形式辞書設定辞書
-dic, yaya_shiori3.dic			// 文 ver.3 形式辞書制御辞書
-dic, yaya_compatible.dic		// YAYAに移行用（YAYA: AYA過去互換用辭書）
-//---- -------- ---------------------------------------------------------------------
-dic, phantom_string.dic			// 文字列リソース辞書(右键菜单辞书
-dic, punctuation.dic
-dic, phantom_bootend.dic		// 起動/終了/切り替えトーク辞書（起动/关闭/切换 对话辞书/最小/大化
-dic, phantom_mouse.dic			// マウス入力関連辞書
-dic, phantom_etc.dic			// 種々のイベント辞書（其他核心事件辞书
-dic, phantom_menu.dic			// 目录选单处理辞书
-dic, phantom_time.dic
-dic, phantom_ghosttalk.dic
-//---- 对话用辞书 ---------------------------------------------------------------------
-dic, phantom_aitalk.dic
-dic, phantom_aitalk1.dic
-dic, phantom_aitalk2.dic
-dic, phantom_aitalk3.dic
-dic, phantom_aitalk4.dic
-dic, phantom_aitalk5.dic
-dic, phantom_aitalk6.dic
-dic, phantom_aitalk7.dic
-dic, phantom_story.dic
-dic, phantom_qa.dic
+includeEX, ../dic/_loading_order.txt
+
 //---- 実行ログ -------------------------------------------------------------------------
 //log, aya.log			// 实行LOG会记录在ayame.log中。。
 //iolog, on				//有关使用“玉”的选项
