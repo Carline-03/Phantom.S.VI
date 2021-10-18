@@ -1,0 +1,3 @@
+includeEX, aya/_loading_order.txt
+dicdir, system
+dicdir, talk
