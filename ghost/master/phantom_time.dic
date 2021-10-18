@@ -1,64 +1,53 @@
-﻿///////// 此文檔中存在特殊符號 ? (壹個音符),有可能妳只看到壹個方框,但如果看到的是 ? 時請用其他工具修改
-///////// 時間處理/見切、重疊反應
-///////// by ndmh.
+/////////此文檔中存在特殊符號 ? (壹個音符),有可能妳只看到壹個方框,但如果看到的是 ? 時請用其他工具修改
+/////////時間處理/見切、重疊反應
+/////////by ndmh.
 
 //**** 時間處理 ***************************************************************************************************
 OnMinuteChange
 {
 
 	//计算人格起动总时间/单位分
-	elapsedtimetotal += 1;
-	
+	elapsedtimetotal += 1
+
 	smoketime = TOINT(systemuptime) - TOINT(lastboottime)
 }
 
 //----- OnSecondChange ---------------------
 OnSecondChange
 {
-	if mode == "0"
-	{
-		if mikireflag == 1 && reference1 == 0
-		{
-      //見切終了
+	if mode == '0'{
+		if mikireflag == 1 && reference1 == 0{
+			//見切終了
 			EndMikireTalk
 		}
 		mikireflag = reference1
-		if headpatflag == 1
-		{
-			if headpattime >= 30
-			{
+		if headpatflag == 1{
+			if headpattime >= 30{
 				headpatcount = 0
 				headpatflag = 0
 				headpattime = 0
 			}
-			else
-			{
+			else{
 				headpattime++
 			}
 		}
-		if bustpatflag == 1
-		{
-			if bustpattime >= 30
-			{
+		if bustpatflag == 1{
+			if bustpattime >= 30{
 				bustpatcount = 0
 				bustpatflag = 0
 				bustpattime = 0
 			}
-			else
-			{
+			else{
 				bustpattime++
 			}
 		}
-		if bustclickflag == 1
-		{
-			if bustclicktime >= 30
-			{
+		if bustclickflag == 1{
+			if bustclicktime >= 30{
 				bustclickcount = 0
 				bustclickflag = 0
 				bustclicktime = 0
 			}
-			else
-			{
+			else{
 				bustclicktime++
 			}
 		}
@@ -70,17 +59,14 @@ OnSecondChange
 
 OnSurfaceRestore
 {
-	if story == 3
-	{
-		"\0\s[61]\1\s[-1]\e"
+	if story == 3{
+		'\0\s[61]\1\s[-1]\e'
 	}
-	elseif story == 2
-	{
-		"\0\s[1]\1\s[50]\e"
+	elseif story == 2{
+		'\0\s[1]\1\s[50]\e'
 	}
-	else
-	{
-		"\0\s[0]\1\s[50]\e"
+	else{
+		'\0\s[0]\1\s[50]\e'
 	}
 }
 
@@ -88,33 +74,33 @@ OnSurfaceRestore
 //其實用GETSECCOUNT()來做的話更容易,不過那樣存的參數就不能壹目了然了...
 daysfromfirstboot
 {
-  _days=0;
-  _mon=(31,28,31,30,31,30,31,31,30,31,30,31);
-  _fy=TOINT(firstboottime[0]);
-  _fm=TOINT(firstboottime[1]);
-  _fd=TOINT(firstboottime[2]);
-  while _fy<=year {
-    if _fy%4==0
-      _mon[1]=29;
-    if year==_fy {
-      while _fm%12<month {
-        _days+=_mon[_fm%12-1];
-        _fm++;
-      }
-      _days=_days+day-_fd;
-    }
-    elseif _fy==TOINT(firstboottime[0]) {
-      while _fm<=12 {
-        _days+=_mon[_fm-1];
-        _fm++;
-      }
-    }
-    else {
-      if _fy%4==0
-        _days++;
-      _days+=365;
-    }
-    _fy++;
-  }
-  _days;
+	_days=0
+	_mon=(31,28,31,30,31,30,31,31,30,31,30,31)
+	_fy=TOINT(firstboottime[0])
+	_fm=TOINT(firstboottime[1])
+	_fd=TOINT(firstboottime[2])
+	while _fy<=year {
+		if _fy%4==0
+			_mon[1]=29
+		if year==_fy {
+			while _fm%12<month {
+				_days+=_mon[_fm%12-1]
+				_fm++
+			}
+			_days=_days+day-_fd
+		}
+		elseif _fy==TOINT(firstboottime[0]) {
+			while _fm<=12 {
+				_days+=_mon[_fm-1]
+				_fm++
+			}
+		}
+		else {
+			if _fy%4==0
+				_days++
+			_days+=365
+		}
+		_fy++
+	}
+	_days
 }

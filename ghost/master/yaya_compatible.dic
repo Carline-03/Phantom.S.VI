@@ -3,14 +3,14 @@
 //互換処理
 //******************************************************************************
 
-// aya5.dll設定（旧）
+//aya5.dll設定（旧）
 #globaldefine	AYAINFO_VERSION	0
 #globaldefine	AYAINFO_CHARSET	1
 #globaldefine	AYAINFO_PATH	2
 #globaldefine	AYAINFO_NAME	3
 #globaldefine	AYAINFO_AUTHOR	4
 
-// 旧互換性保持のためのシステム関数補完（読み替えのみで対応可能なもの）
+//旧互換性保持のためのシステム関数補完（読み替えのみで対応可能なもの）
 #globaldefine	SETSEPARATOR	SETDELIM
 #globaldefine	TONUMBER2		TOINT
 #globaldefine	TOSTRING2		TOSTR
@@ -35,9 +35,9 @@
 
 ASC
 {
-	if !_argc;                              " "
-	elseif GETTYPE(_argv[0]) != 1;          " "
-	elseif _argv[0] < 0 || _argv[0] > 0x7f; " "
+	if !_argc;                              ' '
+	elseif GETTYPE(_argv[0]) != 1;          ' '
+	elseif _argv[0] < 0 || _argv[0] > 0x7f; ' '
 	else;                                   CHR(_argv[0])
 }
 
@@ -57,7 +57,7 @@ ISINSIDE
 {
 	if _argc < 3;                                             0
 	elseif  (_argv[1] <= _argv[0] && _argv[0] <= _argv[2]) ||/
-			(_argv[2] <= _argv[0] && _argv[0] <= _argv[1]);   1
+	(_argv[2] <= _argv[0] && _argv[0] <= _argv[1]);   1
 	else;                                                     0
 }
 
@@ -92,17 +92,17 @@ REQ.KEY
 	if !_argc; return
 
 	switch GETTYPE(_i = _argv[0]) {
-		// エラー
-		""
+		//エラー
+		''
 
-		// 位置指定
-		var.req.key[_i];
+		//位置指定
+		var.req.key[_i]
 
-		// 位置指定（実数）　整数化して処理
+		//位置指定（実数）　整数化して処理
 		var.req.key[TOINT(_i)]
 
-		// 文字列はエラー
-		""
+		//文字列はエラー
+		''
 	}
 }
 
@@ -120,16 +120,16 @@ REQ.VALUE
 	if !_argc; return
 
 	switch GETTYPE(_i = _argv[0]) {
-		// エラー
-		""
+		//エラー
+		''
 
-		// 位置指定
-		var.req.value[_i];
+		//位置指定
+		var.req.value[_i]
 
-		// 位置指定（実数）　整数化して処理
+		//位置指定（実数）　整数化して処理
 		var.req.value[TOINT(_i)]
 
-		// 名前指定
+		//名前指定
 		{
 			_sz = ARRAYSIZE(var.req.key)
 			for _j = 0; _j < _sz; _j++ {
@@ -151,17 +151,17 @@ LIB.KEY
 	if !_argc; return
 
 	switch GETTYPE(_i = _argv[0]) {
-		// エラー
-		""
+		//エラー
+		''
 
-		// 位置指定
-		var.lib.key[_i];
+		//位置指定
+		var.lib.key[_i]
 
-		// 位置指定（実数）　整数化して処理
+		//位置指定（実数）　整数化して処理
 		var.lib.key[TOINT(_i)]
 
-		// 文字列はエラー
-		""
+		//文字列はエラー
+		''
 	}
 }
 
@@ -179,16 +179,16 @@ LIB.VALUE
 	if !_argc; return
 
 	switch GETTYPE(_i = _argv[0]) {
-		// エラー
-		""
+		//エラー
+		''
 
-		// 位置指定
-		var.lib.value[_i];
+		//位置指定
+		var.lib.value[_i]
 
-		// 位置指定（実数）　整数化して処理
+		//位置指定（実数）　整数化して処理
 		var.lib.value[TOINT(_i)]
 
-		// 名前指定
+		//名前指定
 		{
 			_sz = ARRAYSIZE(var.lib.key)
 			for _j = 0; _j < _sz; _j++ {
@@ -204,13 +204,13 @@ LIB.VALUE
 
 
 //******************************************************************************
-// 文 version 4 以前の変数/関数の補完
+//文 version 4 以前の変数/関数の補完
 //******************************************************************************
 restore_old_variables
 {
-    // ascii
-    ascii = IARRAY
-    for _i = 0; _i <= 0x7f; _i++ {
-        ascii ,= CHR(_i)
-    }
+	//ascii
+	ascii = IARRAY
+	for _i = 0; _i <= 0x7f; _i++ {
+		ascii ,= CHR(_i)
+	}
 }

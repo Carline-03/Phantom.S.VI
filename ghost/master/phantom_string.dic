@@ -1,6 +1,6 @@
-﻿///////// 文　ゴーストテンプレート
-///////// 文字列リソース辞書
-///////// written by umeici.
+/////////文　ゴーストテンプレート
+/////////文字列リソース辞書
+/////////written by umeici.
 
 //**** 文字列リソース *******************************************************************
 
@@ -12,64 +12,64 @@ On_username
 
 On_vanishbutton.caption
 {
-	"「再见！」"
+	'「再见！」'
 }
 
 On_shellrootbutton.caption
 {
-	"换套衣服"
-	"更换shell"
+	'换套衣服'
+	'更换shell'
 }
 
 On_balloonrootbutton.caption
 {
-	"更换说话的气泡"
-	"换对话框"
+	'更换说话的气泡'
+	'换对话框'
 }
 
 On_hidebutton.caption
 {
-	"缩小人格"
+	'缩小人格'
 }
 
 On_dressuprootbutton.caption
 {
-	"增加装饰品"
+	'增加装饰品'
 }
 
 On_quitbutton.caption
 {
-	"关闭程序"
+	'关闭程序'
 }
 
 On_pluginrootbutton.caption
 {
-	"使用外挂"
+	'使用外挂'
 }
 
 On_biffbutton.caption
 {
-	"查看邮箱"
+	'查看邮箱'
 }
 
 On_configurationrootbutton.caption
 {
-	"设定人格"
+	'设定人格'
 }
 
 On_shellscalerootbutton.caption
 {
-	"缩小放大"
+	'缩小放大'
 }
 
 On_inforootbutton.caption
 {
-	"相关情报"
+	'相关情报'
 }
 
 On_headlinesenserootbutton.caption
 {
-	"线上新闻"
+	'线上新闻'
 }
 
 //---- 消滅指示ボタン表示切り替え -------------------------------------------------------
@@ -81,13 +81,13 @@ On_vanishbutton.visible
 //---- 起動中の他のゴースト名取得 -------------------------------------------------------
 On_otherghostname
 {
-	// 現在起動中のゴーストのリストを作成する
-	ghostexlist = ""
+	//現在起動中のゴーストのリストを作成する
+	ghostexlist = ''
 	_i = 0
 	while _i >= 0 {
 		_ghostname = NAMETOVALUE("reference%_i")
-		if _ghostname != "" {
-			if _i > 0; ghostexlist += ","
+		if _ghostname != '' {
+			if _i > 0; ghostexlist += ','
 			ghostexlist += _ghostname[0]
 			_i++
 		}
@@ -104,17 +104,17 @@ On_version
 
 On_craftman
 {
-	"umeici"
+	'umeici'
 }
 
 On_craftmanw
 {
-	"梅市"
+	'梅市'
 }
 
 On_name
 {
-	"AYA"
+	'AYA'
 }
 
 //---- Owned SSTP 用 uniqueid 取得 ------------------------------------------------------

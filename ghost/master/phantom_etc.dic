@@ -1,60 +1,56 @@
-﻿///////// 文　ゴーストテンプレート
-///////// 種々のイベント辭書
-///////// written by umeici.
+/////////文　ゴーストテンプレート
+/////////種々のイベント辭書
+/////////written by umeici.
 
 //**** インストー兒關連 *****************************************************************
 
 //---- インストー兒中のメッセージ -------------------------------------------------------
 OnInstallBegin
 {
-	"\0\s[0]要安装什么吗？\e"
+	'\0\s[0]要安装什么吗？\e'
 }
 
 On_homeurl
 {
 	//这个是更新用的网址
-	"http://"
+	'http://'
 }
 
 //---- インストー兒完了メッセージ -------------------------------------------------------
 OnInstallComplete
 {
-	if reference0 == "shell"
-	{
+	if reference0 == 'shell'{
 		"\0\s[0]安装了外表%(reference1)，要切换吗？\n\n/
 		\__q[change_shell]☆切换外表\__q\n/
 		\__q[chang_no]☆不用了\__q\e"
 	}
-	elseif reference0 == "ghost"
-	{
+	elseif reference0 == 'ghost'{
 		"\0\s[0]%(reference0)-%(reference1)，是新的朋友吗？\n/
 		要不我先离开，你们好好聊聊？\n\n/
 		\__q[chang_new]☆嗯，拜托你了\__q\n/
 		\__q[chang_no]☆不用了\__q\e"
 	}
-	elseif reference0 == "balloon"
-	{
+	elseif reference0 == 'balloon'{
 		"\0\s[0]%(reference0)-%(reference1)收到了。\e"
 	}
-	elseif reference0 == "plugin"
-	{
+	elseif reference0 == 'plugin'{
 		"\0\s[0]%(reference0)-%(reference1)收到了。\e"
 	}
 }
 
 Select.chang_no
 {
-"\0不用了是吗？好的。"
+	'\0不用了是吗？好的。'
 }
 
 Select.chang_new
 {
-"\0\s[3]那么我就先离开了。\_w[1000]\![change,ghost,lastinstalled]"
+	'\0\s[3]那么我就先离开了。\_w[1000]\![change,ghost,lastinstalled]'
 }
 
 Select.change_shell
 {
-"\0\s[3]那么我就先离开了。\_w[1000]\![change,shell,lastinstalled]"
+	'\0\s[3]那么我就先离开了。\_w[1000]\![change,shell,lastinstalled]'
 }
 
 
@@ -62,33 +58,27 @@ OnShellChanging
 {
 	lastshell.name = shell.name
 	shell.name = reference0
-	if lastshell.name == shell.name
-	{
-		"\0\s[0]重新載入服裝\e"
+	if lastshell.name == shell.name{
+		'\0\s[0]重新載入服裝\e'
 	}
-	elseif shell.name == "master"
-	{
-		"\0\s[0]換回master衣服\e"
+	elseif shell.name == 'master'{
+		'\0\s[0]換回master衣服\e'
 	}
-	else
-	{
-		"\0\s[0]新衣服？\e"
+	else{
+		'\0\s[0]新衣服？\e'
 	}
 }
 
 OnShellChanged
 {
-	if lastshell.name == shell.name
-	{
-		"\0\s[0]重載完成\e"
+	if lastshell.name == shell.name{
+		'\0\s[0]重載完成\e'
 	}
-	elseif shell.name == "master"
-	{
-		"\0\s[0]換回了master\e"
+	elseif shell.name == 'master'{
+		'\0\s[0]換回了master\e'
 	}
-	else
-	{
-		"\0\s[17]谢、谢谢！我很……喜欢！\e"
+	else{
+		'\0\s[17]谢、谢谢！我很……喜欢！\e'
 	}
 }
 
@@ -111,7 +101,7 @@ OnInstallRefuse
 
 OnVanishSelecting
 {
-	"\0\s[10]……"
+	'\0\s[10]……'
 }
 
 OnVanishSelected
@@ -127,12 +117,12 @@ OnVanishSelected
 
 OnVanishCancel
 {
-	"\0\s[7]……"
+	'\0\s[7]……'
 }
 
 TalkVanishButtonHold
 {
-	"\0\s[7]……"
+	'\0\s[7]……'
 }
 
 OnVanished
@@ -150,38 +140,32 @@ OnOtherGhostVanish
 
 OnBIFFBegin
 {
-	"\0\s[0]正在查看郵箱的信息。\_q\e"
+	'\0\s[0]正在查看郵箱的信息。\_q\e'
 }
 
 OnBIFFComplete
 {
-	if reference0 == 0
-	{
-		"\0\s[0]裏面沒有信件。\e"
+	if reference0 == 0{
+		'\0\s[0]裏面沒有信件。\e'
 	}
-	else
-	{
+	else{
 		"\0\s[0]信箱裏面有%(reference0)封信。\n\n[half]\_q信箱的總容量：%(reference1) Bytes\_q\e"
 	}
 }
 
 OnBIFFFailure
 {
-	if reference0 == "timeout"
-	{
-		"\0\s[0]…\w5…\w9網絡延時\e"
+	if reference0 == 'timeout'{
+		'\0\s[0]…\w5…\w9網絡延時\e'
 	}
-	elseif reference0 == "kick"
-	{
-		"\0\s[0]密碼不正確\e"
+	elseif reference0 == 'kick'{
+		'\0\s[0]密碼不正確\e'
 	}
-	elseif reference0 == "defect"
-	{
-		"\0\s[0]信箱有點不太對勁？\e"
+	elseif reference0 == 'defect'{
+		'\0\s[0]信箱有點不太對勁？\e'
 	}
-	else
-	{
-		"\0\s[0]不知道爲什麽打不開信箱。\e"
+	else{
+		'\0\s[0]不知道爲什麽打不開信箱。\e'
 	}
 }
 
@@ -191,7 +175,7 @@ OnBIFFFailure
 //---- ネットワーク更新開始 -------------------------------------------------------------
 OnUpdateBegin
 {
-	"\0\s[0]正在更新\e"
+	'\0\s[0]正在更新\e'
 }
 
 //---- ネットワーク更新准備完了 ---------------------------------------------------------
@@ -202,32 +186,27 @@ OnUpdateReady
 
 OnUpdateComplete
 {
-	if reference0 == "none"
-	{
-		"\0\s[1]没有更新啦。\e"
+	if reference0 == 'none'{
+		'\0\s[1]没有更新啦。\e'
 	}
-	else
-	{
-		"\0\s[0]……更新完畢：\n\n/"
+	else{
+		'\0\s[0]……更新完畢：\n\n/'
 		--
-		""
+		''
 		--
-		"\e"
+		'\e'
 	}
 }
 
 OnUpdateFailure
 {
-	if reference0 == "timeout"
-	{
-		"\0\s[15]啊……网络堵塞了啊。\n（失败原因：链接超时。）\e"
+	if reference0 == 'timeout'{
+		'\0\s[15]啊……网络堵塞了啊。\n（失败原因：链接超时。）\e'
 	}
-	elseif reference0 == "md5 miss"
-	{
-		"\0\s[0]嗯……唔\n（失败原因：MD5信息不一致。）\e"
+	elseif reference0 == 'md5 miss'{
+		'\0\s[0]嗯……唔\n（失败原因：MD5信息不一致。）\e'
 	}
-	else
-	{
+	else{
 		"\0\s[16]啊……更新出错了！\s[15]报、抱歉！\n（失败原因：%(reference0)。）\e"
 	}
 }
@@ -241,14 +220,14 @@ OnUpdate.OnDownloadBegin
 
 OnUpdate.OnMD5CompareBegin
 {
-	"\0那就确认一下"
+	'\0那就确认一下'
 	--
 	"\n（核對\_q%(reference0)的MD5校驗碼\_q。）"
 }
 
 OnUpdate.OnMD5CompareComplete
 {
-	"\0…………"
+	'\0…………'
 	--
 	"\n（\_q\n%(reference1)\n%(reference2)\n核對OK\_q。）"
 }
@@ -256,7 +235,7 @@ OnUpdate.OnMD5CompareComplete
 //---- ネットワーク更新 MD5値不一致 -----------------------------------------------------
 OnUpdate.OnMD5CompareFailure
 {
-	"\0\s[19]嗯？好像没有了？\n\n（MD5不一致，更新失敗了。）"
+	'\0\s[19]嗯？好像没有了？\n\n（MD5不一致，更新失敗了。）'
 }
 
 //**** ヘッドラインセンス ***************************************************************
@@ -271,18 +250,15 @@ OnHeadlinesenseBegin
 OnHeadlinesense.OnFind
 {
 	//---- はじめのセリフ
-	if reference2 == "First" || reference2 == "First and Last"
-	{
+	if reference2 == "First" || reference2 == "First and Last"{
 		//---- 最初のページ
 		"\0\b2\s[0]『%(reference0)』的Headline。"
 	}
-	elseif reference2 == "Next"
-	{
+	elseif reference2 == 'Next'{
 		//---- 真ん中あたりのページ
 		"\0\b2\s[0]『%(reference0)』的Headline。"
 	}
-	elseif reference2 == "Last"
-	{
+	elseif reference2 == 'Last'{
 		//---- 最後のページ
 		"\0\b2\s[0]『%(reference0)』的Headline。"
 	}
@@ -291,15 +267,13 @@ OnHeadlinesense.OnFind
 	"\n\n%(reference3)\n\n"
 	--
 	//---- 選択肢
-	if reference2 == "First" || reference2 == "Next"
-	{
+	if reference2 == "First" || reference2 == "Next"{
 		//---- 次のページがある場合
 		"\q0[][◇次頁]/
 		\q1[%reference1][◇讀取]/
 		\q2[HEADLINECANCEL][◇取消]\e"
 	}
-	else
-	{
+	else{
 		//---- 次のページがない場合
 		"\q0[%reference1][◇讀取]/
 		\q1[HEADLINECANCEL][◇取消]\e"
@@ -309,28 +283,25 @@ OnHeadlinesense.OnFind
 //---- ヘッドライン更新が無かった -------------------------------------------------------
 OnHeadlinesenseComplete
 {
-	"\0\s[0]…………\e"
+	'\0\s[0]…………\e'
 }
 
 //---- ヘッドラインセンス失敗 -----------------------------------------------------------
 OnHeadlinesenseFailure
 {
-	"\0\s[0]無法順利完成。\w9\n因為"
+	'\0\s[0]無法順利完成。\w9\n因為'
 	--
-	if reference0 == "can't download"
-	{
-		"下載失敗"
+	if reference0 == "can't download"{
+		'下載失敗'
 	}
-	elseif reference0 == "can't analyze"
-	{
-		"解析失敗"
+	elseif reference0 == "can't analyze"{
+		'解析失敗'
 	}
-	else
-	{
-		"不知名原因"
+	else{
+		'不知名原因'
 	}
 	--
-	"導致的。\e"
+	'導致的。\e'
 }
 
 
@@ -339,25 +310,25 @@ OnHeadlinesenseFailure
 //---- updates2.dau作成開始 -------------------------------------------------------------
 OnUpdatedataCreating
 {
-	"\0\s[0]准備制作『update2.dau』。\e"
+	'\0\s[0]准備制作『update2.dau』。\e'
 }
 
 //---- updates2.dau作成完了 -------------------------------------------------------------
 OnUpdatedataCreated
 {
-	"\0\s[0]完成。\e"
+	'\0\s[0]完成。\e'
 }
 
 //---- NAR作成開始 ----------------------------------------------------------------------
 OnNarCreating
 {
-	"\0\s[0]准備制作『nar』檔案。\e"
+	'\0\s[0]准備制作『nar』檔案。\e'
 }
 
 //---- NAR作成完了 ----------------------------------------------------------------------
 OnNarCreated
 {
-	"\0\s[0]完成。\e"
+	'\0\s[0]完成。\e'
 }
 
 //****　時計合わせ　*********************************************************************
@@ -365,7 +336,7 @@ OnNarCreated
 //----　時計合わせ開始 ------------------------------------------------------------------
 OnSNTPBegin
 {
-	"\0\s[0]開始查詢正確時間。\e"
+	'\0\s[0]開始查詢正確時間。\e'
 }
 
 //----　時刻取得成功、比較開始 ----------------------------------------------------------
@@ -376,12 +347,10 @@ OnSNTPCompare
 	local   %reference2[0]/%reference2[1]/%reference2[2] %reference2[3]:%reference2[4]:%reference2[5]\w2\n/
 	\n"
 	--
-	if reference3 == 0
-	{
-		"\0\s[0]已經對准了。\e"
+	if reference3 == 0{
+		'\0\s[0]已經對准了。\e'
 	}
-	else
-	{
+	else{
 		"\0\n\s[1]誤差%(reference3)秒。\w9\w9\s[0]\n調整成正確時間。\6\e"
 	}
 }
@@ -389,7 +358,7 @@ OnSNTPCompare
 //----　時計合わせ失敗 ------------------------------------------------------------------
 OnSNTPFailure
 {
-	"\0\s[3]無法確認…\e"
+	'\0\s[3]無法確認…\e'
 }
 
 
@@ -416,19 +385,19 @@ OnURLDropping
 //---- 起動時に MATERIA を検出 ----------------------------------------------------------
 OnEmbryoExist
 {
-	"\0\s[0]以前的「僞春菜」起動了。\e"
+	'\0\s[0]以前的「僞春菜」起動了。\e'
 }
 
 //---- 起動時に貓どり子を検出 -----------------------------------------------------------
 OnNekodorifExist
 {
-	"\0\s[0]\e"
+	'\0\s[0]\e'
 }
 
 //---- スクリーンセーバー実行開始 -------------------------------------------------------
 OnScreenSaverStart
 {
-	"\0\s[0]螢幕保護程式開始工作了\e"
+	'\0\s[0]螢幕保護程式開始工作了\e'
 }
 
 */

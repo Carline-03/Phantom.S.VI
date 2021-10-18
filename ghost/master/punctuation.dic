@@ -1,13 +1,12 @@
-﻿OnTranslate
-{ 
+OnTranslate
+{
 	_txt = reference0
-   	if fjswitch == 0
-	{
-   	_txt = FUNCTIONEX("ChConverter.dll", "simplified", _txt) //簡體化
-   	}
+	if fjswitch == 0{
+		_txt = FUNCTIONEX("ChConverter.dll", "simplified", _txt)//簡體化
+	}
 	--
 	_txt = REPLACE(_txt,"普通：","\0\s[0]")
-//	_txt = REPLACE(_txt,"User","%(username)")
+	//_txt = REPLACE(_txt,"User","%(username)")
 	_txt
 }
 
@@ -23,7 +22,7 @@
 //波浪号是全角，呻吟号【其实是英文的波浪号= =】不在其中谢谢
 //显然，请不要和带有下面标点的颜文字共同使用
 //备注：此脚本替换辞书所有在这之后读取的内容，使用的话不能在后方选项中带有中文标点，会导致显示不正常、选项显示的延迟以及\_q指令的破坏。
-//      因此，有带标点的选项之类，请把所有不需要调整的项目放在这段脚本的前面，必要的话参看yaya.txt。
+//因此，有带标点的选项之类，请把所有不需要调整的项目放在这段脚本的前面，必要的话参看yaya.txt。
 
 //一次：初步调整
 #globaldefine	、				、\w8

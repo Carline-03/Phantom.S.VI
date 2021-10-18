@@ -1,39 +1,39 @@
-﻿///////// 文　ゴーストテンプレート
-///////// GHOST起動/終了/切替/最小/大化
-///////// 此文檔中存在特殊符號 ♪ (壹個音符),有可能你只看到壹個方框,但如果看到的是 ? 時請用其他工具修改
+/////////文　ゴーストテンプレート
+/////////GHOST起動/終了/切替/最小/大化
+/////////此文檔中存在特殊符號 ♪ (壹個音符),有可能你只看到壹個方框,但如果看到的是 ? 時請用其他工具修改
 
 //**** 初回起動 *******************************************************************************************************
 //---- OnFirstBoot事件 ------------------------------------------------------------------
 OnFirstBoot
 {
-  // 初始化
+	//初始化
 	mode = 0
 	story = 0
-	aitalkinterval = 60        // 對話，1分鍾
-	username = "使用者"
+	aitalkinterval = 60//對話，1分鍾
+	username = '使用者'
 	firstboottime = "%(year),%(month),%(day),%(hour),%(minute)"
-  elapsedtime = 0             // 人格關閉時間
-	elapsedtimetotal = 0	      // 保存人格總起動時間/單位分
+	elapsedtime = 0//人格關閉時間
+	elapsedtimetotal = 0//保存人格總起動時間/單位分
 	lastboottime = "%(systemuptime)"
-	lastTalk			= ""
-	GhostLastBoot			= CurrentTime; 
-	Goodevening = ""            // 對于傍晚時分的問好
-	silent = "0"
-	stroke = 0		              // 撫摸判定用
-	teachusername = 0		        // 記住user名用
-	mikireflag = 0		          // 見切處理用
-	mikireswitch = "1"
-	kasanariswitch = "0"		    // 是否出現重疊反應
-	teachuserbirthday = 0		    // 記住user生日用（預留）
-	SlowTime = GETSECCOUNT();   // 用來判斷人格關閉時間是否超過壹周的參數
-	initializecryptogram;       // 初始化mima
+	lastTalk			= ''
+	GhostLastBoot			= CurrentTime
+	Goodevening = ''//對于傍晚時分的問好
+	silent = '0'
+	stroke = 0//撫摸判定用
+	teachusername = 0//記住user名用
+	mikireflag = 0//見切處理用
+	mikireswitch = '1'
+	kasanariswitch = '0'//是否出現重疊反應
+	teachuserbirthday = 0//記住user生日用（預留）
+	SlowTime = GETSECCOUNT()//用來判斷人格關閉時間是否超過壹周的參數
+	initializecryptogram//初始化mima
 	otherghosttalkswitch = 1
 	Firstbootday = day
 	Firstbootmonth = month
 	Firstbootyear = year
 	fjswitch = 1
-	shell.name = "master"
-	EVAL("first");
+	shell.name = 'master'
+	EVAL('first')
 	mode = 0
 	love = 0
 	story = 0
@@ -43,20 +43,20 @@ OnFirstBoot
 //---- 初次啓動對話 -----------------------------------------------------------------------
 first
 {
-	"\0\s[0]\1\s[50]"
+	'\0\s[0]\1\s[50]'
 	--
-	"\0\t你好？\n/
+	'\0\t你好？\n/
 	\1参赛者紫堂幻已接入网络。\n/
 	\0\s[5]那看来我没有错误操作，真是太好了。\n/
 	\s[0]你好，我是紫堂幻！\x\c请问我应该怎么称呼你呢？\n/
-	\![open,inputbox,OnTeachnameFirst,-1]"
+	\![open,inputbox,OnTeachnameFirst,-1]'
 }
 
 OnTeachnameFirst
 {
 	username = "%(reference0)"
 
-	"\t\0\s[4]好的，我记住了！\n/
+	'\t\0\s[4]好的，我记住了！\n/
 	那么，接下来就请多多指教！\n\n/
 	\1\s[51]等一下！\n\n/
 	\0\s[13]嗯？\n\n/
@@ -79,59 +79,51 @@ OnTeachnameFirst
 	\1如果您需要更多的帮助，就请稍候双击我吧！\n/
 	那么，接下来——\n\n/
 	\0\s[4]请多多指教了！\n\n/
-	\1\s[51]请多多指教！\e"
+	\1\s[51]请多多指教！\e'
 }
 
 OnBoot
 {
-	GhostLastBoot		= CurrentTime; 
-	CurrentTime		= GETSECCOUNT();
-	lastTalk		 = "什麽都沒說。\e"
+	GhostLastBoot		= CurrentTime
+	CurrentTime		= GETSECCOUNT()
+	lastTalk		 = '什麽都沒說。\e'
 	_timeslot = GetTimeSlot
 	lastboottime = "%(systemuptime)"
 	table
 	--
-	if story == 3
-	{
-		"\0\s[61]\1\s[-1]"
+	if story == 3{
+		'\0\s[61]\1\s[-1]'
 	}
-	elseif story == 2
-	{
-		"\0\s[1]\1\s[50]"
+	elseif story == 2{
+		'\0\s[1]\1\s[50]'
 	}
-	else
-	{
-		"\0\s[0]\1\s[50]"
+	else{
+		'\0\s[0]\1\s[50]'
 	}
 	--
-	if CurrentTime - GhostLastBoot < 60
-	{
+	if CurrentTime - GhostLastBoot < 60{
 		"\0\s[0]%(username)有漏掉什麽東西嗎？\e"
 	}
-	else
-	{
-		if story ==3
-		{
-			"\0【……】\n/
+	else{
+		if story ==3{
+			'\0【……】\n/
 			【小斯巴达的玩偶静静地站在原地。】\n/
 			【玩偶的身上似乎有淡淡的元力印记。】\n/
-			【也许多敲击一下，就能加深印记，让他回来了。】"
+			【也许多敲击一下，就能加深印记，让他回来了。】'
 		}
-		elseif story == 2
-		{
+		elseif story == 2{
 			"\0\s[9]……又见面了，%(username)。\n/
 			\s[2]抱歉，我现在没什么心情……\n/
 			\s[9]……不是%(username)的错。"
 		}
-		elseif story == 4
-		{
+		elseif story == 4{
 			"\0\s[4]早啊，%(username)！\n/
 			我刚刚就在想着你什么时候来呢！"
 
 			"\0\s[4]%(username)，早上好！\n/
 			你来了啊。\s[１]今天怎么这么早？真的有好好睡觉吗？"
 
-			"\0早！\s[3]今天想聊点什么呢？"
+			'\0早！\s[3]今天想聊点什么呢？'
 
 			"\0天就要黑了啊。%(username)那边也是一样的吗？"
 
@@ -141,8 +133,7 @@ OnBoot
 			"\0\s[4]又见面了，%(username)！\n/
 			今天过得怎么样？"
 		}
-		else
-		{
+		else{
 			"\0又见面了，%(username)。"
 		}
 	}
@@ -150,58 +141,50 @@ OnBoot
 
 OnCloseAll
 {
-	GhostLastBoot		 = CurrentTime; 
-	CurrentTime		 = GETSECCOUNT();
+	GhostLastBoot		 = CurrentTime
+	CurrentTime		 = GETSECCOUNT()
 	bootday = day
 	bootmonth = month
 	bootyear = year
 	--
-	if story == 3
-	{
-		"\0【……】\n/
-		【小斯巴达的玩偶依然静静地站在原地。】"
+	if story == 3{
+		'\0【……】\n/
+		【小斯巴达的玩偶依然静静地站在原地。】'
 	}
-	elseif story == 2
-	{
+	elseif story == 2{
 		"\0\s[2]……那么再见，%(username)。"
 	}
-	elseif story == 4
-	{
+	elseif story == 4{
 		"\0那么我就先走了。\s[3]下次见，%(username)！"
 	}
-	else
-	{
+	else{
 		"\0那么我就先走了。再见，%(username)。"
 	}
 	--
-	"\-\e"
+	'\-\e'
 }
 
 OnClose
 {
-	GhostLastBoot		 = CurrentTime; 
-	CurrentTime		 = GETSECCOUNT();
+	GhostLastBoot		 = CurrentTime
+	CurrentTime		 = GETSECCOUNT()
 	bootday = day
 	bootmonth = month
 	bootyear = year
 	--
-	if story == 3
-	{
-		"\0【……】\n/
-		【小斯巴达的玩偶依然静静地站在原地。】"
+	if story == 3{
+		'\0【……】\n/
+		【小斯巴达的玩偶依然静静地站在原地。】'
 	}
-	elseif story == 2
-	{
+	elseif story == 2{
 		"\0\s[2]……那么再见，%(username)。"
 	}
-	elseif story == 4
-	{
+	elseif story == 4{
 		"\0那么我就先走了。\s[3]下次见，%(username)！"
 	}
-	else
-	{
+	else{
 		"\0那么我就先走了。再见，%(username)。"
 	}
 	--
-	"\-\e"
+	'\-\e'
 }
