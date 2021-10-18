@@ -10,5 +10,5 @@ type,ghost
 sakura.name,紫堂幻
 kero.name,裁判球
 
-icon,hbps.ico
-shiori,satori.dll
+icon,img/hbps.ico
+shiori,shiori/yaya.dll
