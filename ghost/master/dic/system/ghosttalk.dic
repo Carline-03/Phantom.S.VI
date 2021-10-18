@@ -38,7 +38,7 @@ OnGhostCalled
 OnGhostChanging
 {
 	SlowTime = GETSECCOUNT()
-	if reference1 == 'manual'//手动切换
+	if reference1 == 'manual'{//手动切换
 		if '紫堂幻' _in_ reference0{
 			'\0\s[1]啊，有些事。\w9\n/
 			\s[0]抱歉，我先离开一下。\w9'

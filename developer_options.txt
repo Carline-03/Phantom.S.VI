@@ -1,1 +1,2 @@
 ﻿ghost/master/shiori/yaya_variable.cfg,noupdate,nonar
+.gitignore,noupdate,nonar
