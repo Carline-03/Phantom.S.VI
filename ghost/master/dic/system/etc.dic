@@ -252,15 +252,15 @@ OnHeadlinesense.OnFind
 	//---- はじめのセリフ
 	if reference2 == "First" || reference2 == "First and Last"{
 		//---- 最初のページ
-		"\0\b2\s[0]\w2『%(reference0)』\w2的Headline。\w8\w8\w8"
+		"\0\b[2]\s[0]\w2『%(reference0)』\w2的Headline。\w8\w8\w8"
 	}
 	elseif reference2 == 'Next'{
 		//---- 真ん中あたりのページ
-		"\0\b2\s[0]\w2『%(reference0)』\w2的Headline。\w8\w8\w8"
+		"\0\b[2]\s[0]\w2『%(reference0)』\w2的Headline。\w8\w8\w8"
 	}
 	elseif reference2 == 'Last'{
 		//---- 最後のページ
-		"\0\b2\s[0]\w2『%(reference0)』\w2的Headline。\w8\w8\w8"
+		"\0\b[2]\s[0]\w2『%(reference0)』\w2的Headline。\w8\w8\w8"
 	}
 	--
 	//---- ヘッドライン本體
