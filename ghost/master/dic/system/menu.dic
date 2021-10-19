@@ -12,16 +12,16 @@ OpenMenu
 On非正常状态
 {
 	click += 1
-	'\0\s[61]【……】\n/
-	【小斯巴达的玩偶静静地站在原地。】\n/
-	【玩偶的身上似乎有淡淡的元力印记。】\n/
-	【也许多敲击一下,就能加深印记,让他回来了。】'
+	'\0\s[61]【…\w4…】\w8\w8\n/
+	【小斯巴达的玩偶静静地站在原地。\w8\w8\w8】\n/
+	【玩偶的身上似乎有淡淡的元力印记。\w8\w8\w8】\n/
+	【也许多敲击一下,就能加深印记,让他回来了。\w8\w8\w8】'
 }
 
 On正常状态
 {
-	'\1已经呼出菜单。/
-	\0\b[2]有什么事？\n\n/
+	'\1已经呼出菜单。\w8\w8\w8/
+	\0\b[2]有什么事？\w8\w8\w8\n\n/
 	\q[☆说点儿什么吧,OnAiTalk]\n/
 	\q[☆上一句话,ltalk]\n/
 	\q[☆改变对我的称呼,TalkInterval]\n/
@@ -37,9 +37,9 @@ On没什么
 On状态查询
 {
 	"\0\b[2]当前状态\n\n/
-	好感度：%(love)\n/
-	对话频率：%(aitalkinterval)秒/次\n/
-	用户名：%(username)\n\n/
+	好感度：\w8\w8%(love)\n/
+	对话频率：\w8\w8%(aitalkinterval)秒/次\n/
+	用户名：\w8\w8%(username)\n\n/
 	\q[返回上层,On正常状态]"
 }
 
@@ -56,24 +56,24 @@ Select.ReturnMenu
 Select.teachusernamerun
 {
 	username0 = "%(username)"
-	'\0好的，想改成什么呢？\![open,inputbox,Onteachusername,-1]\e'
+	'\0好的，\w8\w4想改成什么呢？\w8\w8\w8\![open,inputbox,Onteachusername,-1]\e'
 }
 
 Onteachusername
 {
 	if reference0 == ''{
-		"\0\s[0]%(username)是吗？\w9我记住了。\e"
+		"\0\s[0]%(username)是吗？\w8\w8\w8\w9我记住了。\w8\w8\w8\e"
 	}
 	else{
 		username = "%(reference0)"
-		"\0\s[0]%(username)是吗？\w9我记住了。\e"
+		"\0\s[0]%(username)是吗？\w8\w8\w8\w9我记住了。\w8\w8\w8\e"
 	}
 }
 
 
 Select.TalkInterval
 {
-	'\s[0]\b[2]希望通讯器多久亮起一次呢？\n\n[half]'
+	'\s[0]\b[2]希望通讯器多久亮起一次呢？\w8\w8\w8\n\n[half]'
 	--
 	if aitalkinterval == 30{
 		'\q[◆30秒,TalkInterval_30]\n'
@@ -155,5 +155,5 @@ Select.TalkInterval_600
 Select.TalkInterval_0
 {
 	aitalkinterval = 0
-	'\0……设定为不说话'
+	'\0…\w4…\w8\w8设定为不说话'
 }

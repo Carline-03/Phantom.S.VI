@@ -5,7 +5,7 @@ OnGhostCallComplete
 	'\![set,otherghosttalk,true]'
 	--
 	if '紫堂幻' _in_ reference0{
-		'\0\s[0]哎，是另一个我？\e'
+		'\0\s[0]哎，\w8\w4是另一个我？\w8\w8\w8\e'
 	}
 	else{
 		"\0\s[0]%(reference0)过来了\e"
@@ -26,7 +26,7 @@ OnGhostCalled
 	}
 	--
 	if 'Kyara' _in_ reference0{
-		'\0嗯？怎么了？'
+		'\0嗯？\w8\w8\w8怎么了？\w8\w8\w8'
 	}
 	else{
 		"\0\s[0]對%(reference0)的啟動對話\e"
@@ -40,11 +40,11 @@ OnGhostChanging
 	SlowTime = GETSECCOUNT()
 	if reference1 == 'manual'{//手动切换
 		if '紫堂幻' _in_ reference0{
-			'\0\s[1]啊，有些事。\w9\n/
-			\s[0]抱歉，我先离开一下。\w9'
+			'\0\s[1]啊，\w8\w4有些事。\w8\w8\w8\w9\n/
+			\s[0]抱歉，\w8\w4我先离开一下。\w8\w8\w8\w9'
 		}
 		else{
-			"\0\s[0]下一位是%(reference0)。\e"
+			"\0\s[0]下一位是%(reference0)。\w8\w8\w8\e"
 		}
 	}
 }
@@ -63,9 +63,9 @@ OnGhostChanged
 	}
 	--
 	if '紫堂幻' _in_ reference0{
-		'\0我回来了。'
+		'\0我回来了。\w8\w8\w8'
 	}
 	else{
-		"\0\s[0]%(reference0)离开了吗？\e"
+		"\0\s[0]%(reference0)离开了吗？\w8\w8\w8\e"
 	}
 }

@@ -7,7 +7,7 @@
 //---- インストー兒中のメッセージ -------------------------------------------------------
 OnInstallBegin
 {
-	'\0\s[0]要安装什么吗？\e'
+	'\0\s[0]要安装什么吗？\w8\w8\w8\e'
 }
 
 On_homeurl
@@ -20,37 +20,37 @@ On_homeurl
 OnInstallComplete
 {
 	if reference0 == 'shell'{
-		"\0\s[0]安装了外表%(reference1)，要切换吗？\n\n/
+		"\0\s[0]安装了外表%(reference1)，\w8\w4要切换吗？\w8\w8\w8\n\n/
 		\__q[change_shell]☆切换外表\__q\n/
 		\__q[chang_no]☆不用了\__q\e"
 	}
 	elseif reference0 == 'ghost'{
-		"\0\s[0]%(reference0)-%(reference1)，是新的朋友吗？\n/
-		要不我先离开，你们好好聊聊？\n\n/
-		\__q[chang_new]☆嗯，拜托你了\__q\n/
+		"\0\s[0]%(reference0)-%(reference1)，\w8\w4是新的朋友吗？\w8\w8\w8\n/
+		要不我先离开，\w8\w4你们好好聊聊？\w8\w8\w8\n\n/
+		\__q[chang_new]☆嗯，\w8\w4拜托你了\__q\n/
 		\__q[chang_no]☆不用了\__q\e"
 	}
 	elseif reference0 == 'balloon'{
-		"\0\s[0]%(reference0)-%(reference1)收到了。\e"
+		"\0\s[0]%(reference0)-%(reference1)收到了。\w8\w8\w8\e"
 	}
 	elseif reference0 == 'plugin'{
-		"\0\s[0]%(reference0)-%(reference1)收到了。\e"
+		"\0\s[0]%(reference0)-%(reference1)收到了。\w8\w8\w8\e"
 	}
 }
 
 Select.chang_no
 {
-	'\0不用了是吗？好的。'
+	'\0不用了是吗？\w8\w8\w8好的。\w8\w8\w8'
 }
 
 Select.chang_new
 {
-	'\0\s[3]那么我就先离开了。\_w[1000]\![change,ghost,lastinstalled]'
+	'\0\s[3]那么我就先离开了。\w8\w8\w8\_w[1000]\![change,ghost,lastinstalled]'
 }
 
 Select.change_shell
 {
-	'\0\s[3]那么我就先离开了。\_w[1000]\![change,shell,lastinstalled]'
+	'\0\s[3]那么我就先离开了。\w8\w8\w8\_w[1000]\![change,shell,lastinstalled]'
 }
 
 
@@ -65,7 +65,7 @@ OnShellChanging
 		'\0\s[0]換回master衣服\e'
 	}
 	else{
-		'\0\s[0]新衣服？\e'
+		'\0\s[0]新衣服？\w8\w8\w8\e'
 	}
 }
 
@@ -78,7 +78,7 @@ OnShellChanged
 		'\0\s[0]換回了master\e'
 	}
 	else{
-		'\0\s[17]谢、谢谢！我很……喜欢！\e'
+		'\0\s[17]谢、\w8谢谢！\w8\w8\w4我很…\w4…\w8\w8喜欢！\w8\w8\w4\e'
 	}
 }
 
@@ -87,13 +87,13 @@ OnShellChanged
 
 OnInstallFailure
 {
-	"\0\s[0]%(reference0)？\e"
+	"\0\s[0]%(reference0)？\w8\w8\w8\e"
 }
 
 OnInstallRefuse
 {
-	"\0\s[0]这是『%(reference0)』的追加部件呢。\n/
-	我是不能收下的，请在他来的时候把包裹交给他吧。\e"
+	"\0\s[0]这是\w2『%(reference0)』\w2的追加部件呢。\w8\w8\w8\n/
+	我是不能收下的，\w8\w4请在他来的时候把包裹交给他吧。\w8\w8\w8\e"
 }
 
 
@@ -101,38 +101,38 @@ OnInstallRefuse
 
 OnVanishSelecting
 {
-	'\0\s[10]……'
+	'\0\s[10]…\w4…\w8\w8'
 }
 
 OnVanishSelected
 {
-	"\0\s[2]……是这样啊。\n/
-	你……还是决定要和我断开连接了吗……\n/
-	\s[7]我……对不起，\s[8]我……\n/
-	\s[9]……\n/
-	我会想你的。\n/
-	抱歉给你添麻烦了。\n/
-	……\s[16]再见，%(username)。\e"
+	"\0\s[2]…\w4…\w8\w8是这样啊。\w8\w8\w8\n/
+	你…\w4…\w8\w8还是决定要和我断开连接了吗…\w4…\w8\w8\n/
+	\s[7]我…\w4…\w8\w8对不起，\w8\w4\s[8]我…\w4…\w8\w8\n/
+	\s[9]…\w4…\w8\w8\n/
+	我会想你的。\w8\w8\w8\n/
+	抱歉给你添麻烦了。\w8\w8\w8\n/
+	…\w4…\w8\w8\s[16]再见，\w8\w4%(username)。\w8\w8\w8\e"
 }
 
 OnVanishCancel
 {
-	'\0\s[7]……'
+	'\0\s[7]…\w4…\w8\w8'
 }
 
 TalkVanishButtonHold
 {
-	'\0\s[7]……'
+	'\0\s[7]…\w4…\w8\w8'
 }
 
 OnVanished
 {
-	"\0\s[0]卸載掉了%(reference0)之後切換到我。\e"
+	"\0\s[0]卸載掉了%(reference0)之後切換到我。\w8\w8\w8\e"
 }
 
 OnOtherGhostVanish
 {
-	"\0\s[0]我看到%(reference0)被卸載了。"
+	"\0\s[0]我看到%(reference0)被卸載了。\w8\w8\w8"
 }
 
 
@@ -140,16 +140,16 @@ OnOtherGhostVanish
 
 OnBIFFBegin
 {
-	'\0\s[0]正在查看郵箱的信息。\_q\e'
+	'\0\s[0]正在查看郵箱的信息。\w8\w8\w8\_q\e'
 }
 
 OnBIFFComplete
 {
 	if reference0 == 0{
-		'\0\s[0]裏面沒有信件。\e'
+		'\0\s[0]裏面沒有信件。\w8\w8\w8\e'
 	}
 	else{
-		"\0\s[0]信箱裏面有%(reference0)封信。\n\n[half]\_q信箱的總容量：%(reference1) Bytes\_q\e"
+		"\0\s[0]信箱裏面有%(reference0)封信。\w8\w8\w8\n\n[half]\_q信箱的總容量：\w8\w8%(reference1) Bytes\_q\e"
 	}
 }
 
@@ -162,10 +162,10 @@ OnBIFFFailure
 		'\0\s[0]密碼不正確\e'
 	}
 	elseif reference0 == 'defect'{
-		'\0\s[0]信箱有點不太對勁？\e'
+		'\0\s[0]信箱有點不太對勁？\w8\w8\w8\e'
 	}
 	else{
-		'\0\s[0]不知道爲什麽打不開信箱。\e'
+		'\0\s[0]不知道爲什麽打不開信箱。\w8\w8\w8\e'
 	}
 }
 
@@ -181,16 +181,16 @@ OnUpdateBegin
 //---- ネットワーク更新准備完了 ---------------------------------------------------------
 OnUpdateReady
 {
-	"\0\s[0]……\n（有%(reference0)個更新）\e"
+	"\0\s[0]…\w4…\w8\w8\n（有%(reference0)個更新）\e"
 }
 
 OnUpdateComplete
 {
 	if reference0 == 'none'{
-		'\0\s[1]没有更新啦。\e'
+		'\0\s[1]没有更新啦。\w8\w8\w8\e'
 	}
 	else{
-		'\0\s[0]……更新完畢：\n\n/'
+		'\0\s[0]…\w4…\w8\w8更新完畢：\w8\w8\n\n/'
 		--
 		''
 		--
@@ -201,20 +201,20 @@ OnUpdateComplete
 OnUpdateFailure
 {
 	if reference0 == 'timeout'{
-		'\0\s[15]啊……网络堵塞了啊。\n（失败原因：链接超时。）\e'
+		'\0\s[15]啊…\w4…\w8\w8网络堵塞了啊。\w8\w8\w8\n（失败原因：\w8\w8链接超时。）\w8\w8\w8\e'
 	}
 	elseif reference0 == 'md5 miss'{
-		'\0\s[0]嗯……唔\n（失败原因：MD5信息不一致。）\e'
+		'\0\s[0]嗯…\w4…\w8\w8唔\n（失败原因：\w8\w8MD5信息不一致。）\w8\w8\w8\e'
 	}
 	else{
-		"\0\s[16]啊……更新出错了！\s[15]报、抱歉！\n（失败原因：%(reference0)。）\e"
+		"\0\s[16]啊…\w4…\w8\w8更新出错了！\w8\w8\w4\s[15]报、\w8抱歉！\w8\w8\w4\n（失败原因：\w8\w8%(reference0)。）\w8\w8\w8\e"
 	}
 }
 
 //---- ネットワーク更新 ダウンロード開始 ------------------------------------------------
 OnUpdate.OnDownloadBegin
 {
-	"\0…………\n（更新文件「%reference0」）"
+	"\0…\w4…\w4……\w8\w8\n（更新文件\w2「%reference0」）\w2"
 }
 
 
@@ -222,20 +222,20 @@ OnUpdate.OnMD5CompareBegin
 {
 	'\0那就确认一下'
 	--
-	"\n（核對\_q%(reference0)的MD5校驗碼\_q。）"
+	"\n（核對\_q%(reference0)的MD5校驗碼\_q。）\w8\w8\w8"
 }
 
 OnUpdate.OnMD5CompareComplete
 {
-	'\0…………'
+	'\0…\w4…\w4……\w8\w8'
 	--
-	"\n（\_q\n%(reference1)\n%(reference2)\n核對OK\_q。）"
+	"\n（\_q\n%(reference1)\n%(reference2)\n核對OK\_q。）\w8\w8\w8"
 }
 
 //---- ネットワーク更新 MD5値不一致 -----------------------------------------------------
 OnUpdate.OnMD5CompareFailure
 {
-	'\0\s[19]嗯？好像没有了？\n\n（MD5不一致，更新失敗了。）'
+	'\0\s[19]嗯？\w8\w8\w8好像没有了？\w8\w8\w8\n\n（MD5不一致，\w8\w4更新失敗了。）\w8\w8\w8'
 }
 
 //**** ヘッドラインセンス ***************************************************************
@@ -243,7 +243,7 @@ OnUpdate.OnMD5CompareFailure
 //---- ヘッドラインセンス開始 -----------------------------------------------------------
 OnHeadlinesenseBegin
 {
-	"\0\s[0]『%(reference0)』 的Headline確認…\e"
+	"\0\s[0]\w2『%(reference0)』\w2 的Headline確認…\e"
 }
 
 //---- ヘッドライン読み上げ -------------------------------------------------------------
@@ -252,15 +252,15 @@ OnHeadlinesense.OnFind
 	//---- はじめのセリフ
 	if reference2 == "First" || reference2 == "First and Last"{
 		//---- 最初のページ
-		"\0\b2\s[0]『%(reference0)』的Headline。"
+		"\0\b2\s[0]\w2『%(reference0)』\w2的Headline。\w8\w8\w8"
 	}
 	elseif reference2 == 'Next'{
 		//---- 真ん中あたりのページ
-		"\0\b2\s[0]『%(reference0)』的Headline。"
+		"\0\b2\s[0]\w2『%(reference0)』\w2的Headline。\w8\w8\w8"
 	}
 	elseif reference2 == 'Last'{
 		//---- 最後のページ
-		"\0\b2\s[0]『%(reference0)』的Headline。"
+		"\0\b2\s[0]\w2『%(reference0)』\w2的Headline。\w8\w8\w8"
 	}
 	--
 	//---- ヘッドライン本體
@@ -283,13 +283,13 @@ OnHeadlinesense.OnFind
 //---- ヘッドライン更新が無かった -------------------------------------------------------
 OnHeadlinesenseComplete
 {
-	'\0\s[0]…………\e'
+	'\0\s[0]…\w4…\w4……\w8\w8\e'
 }
 
 //---- ヘッドラインセンス失敗 -----------------------------------------------------------
 OnHeadlinesenseFailure
 {
-	'\0\s[0]無法順利完成。\w9\n因為'
+	'\0\s[0]無法順利完成。\w8\w8\w8\w9\n因為'
 	--
 	if reference0 == "can't download"{
 		'下載失敗'
@@ -301,7 +301,7 @@ OnHeadlinesenseFailure
 		'不知名原因'
 	}
 	--
-	'導致的。\e'
+	'導致的。\w8\w8\w8\e'
 }
 
 
@@ -310,25 +310,25 @@ OnHeadlinesenseFailure
 //---- updates2.dau作成開始 -------------------------------------------------------------
 OnUpdatedataCreating
 {
-	'\0\s[0]准備制作『update2.dau』。\e'
+	'\0\s[0]准備制作\w2『update2.dau』。\w8\w8\w8\e'
 }
 
 //---- updates2.dau作成完了 -------------------------------------------------------------
 OnUpdatedataCreated
 {
-	'\0\s[0]完成。\e'
+	'\0\s[0]完成。\w8\w8\w8\e'
 }
 
 //---- NAR作成開始 ----------------------------------------------------------------------
 OnNarCreating
 {
-	'\0\s[0]准備制作『nar』檔案。\e'
+	'\0\s[0]准備制作\w2『nar』\w2檔案。\w8\w8\w8\e'
 }
 
 //---- NAR作成完了 ----------------------------------------------------------------------
 OnNarCreated
 {
-	'\0\s[0]完成。\e'
+	'\0\s[0]完成。\w8\w8\w8\e'
 }
 
 //****　時計合わせ　*********************************************************************
@@ -336,10 +336,10 @@ OnNarCreated
 //----　時計合わせ開始 ------------------------------------------------------------------
 OnSNTPBegin
 {
-	'\0\s[0]開始查詢正確時間。\e'
+	'\0\s[0]開始查詢正確時間。\w8\w8\w8\e'
 }
 
-//----　時刻取得成功、比較開始 ----------------------------------------------------------
+//----　時刻取得成功、\w8比較開始 ----------------------------------------------------------
 OnSNTPCompare
 {
 	"\0\s[0]/
@@ -348,10 +348,10 @@ OnSNTPCompare
 	\n"
 	--
 	if reference3 == 0{
-		'\0\s[0]已經對准了。\e'
+		'\0\s[0]已經對准了。\w8\w8\w8\e'
 	}
 	else{
-		"\0\n\s[1]誤差%(reference3)秒。\w9\w9\s[0]\n調整成正確時間。\6\e"
+		"\0\n\s[1]誤差%(reference3)秒。\w8\w8\w8\w9\w9\s[0]\n調整成正確時間。\w8\w8\w8\6\e"
 	}
 }
 
@@ -378,14 +378,14 @@ OnDisplayChange
 //---- CROW でゴーストインストーラからゴーストをインストー兒を始めた時にも呼ばれます ----
 OnURLDropping
 {
-	"\0\s[6]下載中…\n\n[half]\_qＵＲＬ：%(reference0)\_q\e"
+	"\0\s[6]下載中…\n\n[half]\_qＵＲＬ：\w8\w8%(reference0)\_q\e"
 }
 
 /*
 //---- 起動時に MATERIA を検出 ----------------------------------------------------------
 OnEmbryoExist
 {
-	'\0\s[0]以前的「僞春菜」起動了。\e'
+	'\0\s[0]以前的\w2「僞春菜」\w2起動了。\w8\w8\w8\e'
 }
 
 //---- 起動時に貓どり子を検出 -----------------------------------------------------------
