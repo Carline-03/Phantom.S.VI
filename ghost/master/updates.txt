@@ -5,13 +5,13 @@ file,ghost/master/dic/aya/base/yaya_config.dic23ffb51d9eabe64e12f312b1d0c92d3d
 file,ghost/master/dic/aya/master/yaya_shiori3.dica2dba86b8bd76585c6135c1169bd2d99size=50157date=2021-10-19T18:19:15
 file,ghost/master/dic/aya/_loading_order.txt95e3fdd073b158a7479fca3eb50182basize=28date=2021-07-12T20:07:04
 file,ghost/master/dic/system/bootend.diccd2d5a60a75c96bc9bfae5dc1525469fsize=6077date=2021-10-19T18:19:21
-file,ghost/master/dic/system/etc.dica054ca3e64b784e3e433cff54cfa64fesize=10035date=2021-10-19T21:32:39
+file,ghost/master/dic/system/etc.dicf04425d351d6a16e1d73fb5501c0a622size=9977date=2021-10-24T23:51:11
 file,ghost/master/dic/system/ghosttalk.dic37e7b4c324d802e5a9f504d828e81cf1size=1588date=2021-10-19T18:19:15
 file,ghost/master/dic/system/menu.dic38ddb718ddb0101b113f8d83c0fdb6b3size=2668date=2021-10-24T13:32:03
 file,ghost/master/dic/system/mouse.diced4db8b9fe0ad8757e975ae43dfdebd8size=24165date=2021-10-19T18:19:21
 file,ghost/master/dic/system/qa.dicd3cb0587970789f0b47e4d91797662bbsize=273date=2021-10-19T18:19:15
 file,ghost/master/dic/system/story.dic768b0f59f854206371cb6f115143642esize=44167date=2021-10-19T21:22:14
-file,ghost/master/dic/system/string.dicaf882f090200df6fe8fa4ca2031567eesize=2225date=2021-10-24T23:16:08
+file,ghost/master/dic/system/string.dicaf882f090200df6fe8fa4ca2031567eesize=2225date=2021-10-24T23:50:32
 file,ghost/master/dic/system/time.dicc439b6c32e8d81ec62b2bffbe1e39f3dsize=2079date=2021-10-19T18:19:21
 file,ghost/master/dic/talk/aitalk.dicccaf3da14890ecebc7ecceda16912b18size=2251date=2021-10-19T21:08:06
 file,ghost/master/dic/talk/aitalk1.dic39300fd1823537b23e84088444d0ecd4size=7013date=2021-10-24T13:02:17
