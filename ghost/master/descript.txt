@@ -12,3 +12,4 @@ kero.name,裁判球
 
 icon,img/hbps.ico
 shiori,shiori/yaya.dll
+homeurl,https://e.coding.net/p/carline/d/PhantomS2020/git/raw/master/

@@ -10,6 +10,10 @@ On_username
 	username
 }
 
+On_homeurl{
+	'https://e.coding.net/p/carline/d/PhantomS2020/git/raw/master/'
+}
+
 On_vanishbutton.caption
 {
 	'\w2「再见！」\w8\w8\w4'
