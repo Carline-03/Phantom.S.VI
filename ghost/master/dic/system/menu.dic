@@ -24,8 +24,8 @@ On正常状态
 	\0\b[2]有什么事？\w8\w8\w8\n\n/
 	\q[☆说点儿什么吧,OnAiTalk]\n/
 	\q[☆上一句话,ltalk]\n/
-	\q[☆改变对我的称呼,TalkInterval]\n/
-	\q[☆对话频率,On对话频率]\n/
+	\q[☆改变对我的称呼,teachusernamerun]\n/
+	\q[☆对话频率,TalkInterval]\n/
 	\q[☆状态查询,On状态查询]\n/
 	\q[☆没什么,On没什么]'
 }
