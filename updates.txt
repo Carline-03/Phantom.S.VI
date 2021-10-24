@@ -14,7 +14,7 @@ file,ghost/master/dic/system/story.dic768b0f59f854206371cb6f115143642esize=441
 file,ghost/master/dic/system/string.dicaf882f090200df6fe8fa4ca2031567eesize=2225date=2021-10-24T23:50:32
 file,ghost/master/dic/system/time.dicc439b6c32e8d81ec62b2bffbe1e39f3dsize=2079date=2021-10-19T18:19:21
 file,ghost/master/dic/talk/aitalk.dicccaf3da14890ecebc7ecceda16912b18size=2251date=2021-10-19T21:08:06
-file,ghost/master/dic/talk/aitalk1.dic39300fd1823537b23e84088444d0ecd4size=7013date=2021-10-24T13:02:17
+file,ghost/master/dic/talk/aitalk1.dic149a55317c0035944bb5c809333e2888size=7015date=2021-10-25T00:07:20
 file,ghost/master/dic/talk/aitalk2.dic6199cac0452197aab7e174e857e8b177size=3399date=2021-10-19T18:19:15
 file,ghost/master/dic/talk/aitalk3.dic052c50268061b5f4592870f579f67817size=2743date=2021-10-19T18:19:15
 file,ghost/master/dic/talk/aitalk4.dice28a07d73130979f6675ff4cbfcb819dsize=7069date=2021-10-19T18:19:15
