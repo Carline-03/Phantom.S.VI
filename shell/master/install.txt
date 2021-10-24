@@ -1,4 +1,4 @@
 ﻿Charset,UTF-8
 type,shell
 name,Phantom.S
-directory,Phantom.S
+directory,master

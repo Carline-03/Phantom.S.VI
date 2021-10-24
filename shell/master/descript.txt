@@ -24,7 +24,6 @@ sakura.bindgroup97.default,1
 sakura.bindgroup98.name,帽子,生日帽
 sakura.bindgroup99.name,耳朵,兔耳
 sakura.bindgroup100.name,耳朵,狐狸
-sakura.bindgroup101.name,衣服,车线常服
 
 sakura.balloon.alignment,none
 kero.balloon.alignment,none
