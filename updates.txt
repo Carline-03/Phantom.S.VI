@@ -10,7 +10,7 @@ file,ghost/master/dic/system/ghosttalk.dic37e7b4c324d802e5a9f504d828e81cf1size
 file,ghost/master/dic/system/menu.dic38ddb718ddb0101b113f8d83c0fdb6b3size=2668date=2021-10-24T13:32:03
 file,ghost/master/dic/system/mouse.diced4db8b9fe0ad8757e975ae43dfdebd8size=24165date=2021-10-19T18:19:21
 file,ghost/master/dic/system/qa.dicd3cb0587970789f0b47e4d91797662bbsize=273date=2021-10-19T18:19:15
-file,ghost/master/dic/system/story.dic768b0f59f854206371cb6f115143642esize=44167date=2021-10-19T21:22:14
+file,ghost/master/dic/system/story.dic29c7114de9158c7c12d9af9e6243499bsize=44158date=2021-10-25T22:18:15
 file,ghost/master/dic/system/string.dicaf882f090200df6fe8fa4ca2031567eesize=2225date=2021-10-24T23:50:32
 file,ghost/master/dic/system/time.dic886ad142352cf4ee107f38fa519f401dsize=2114date=2021-10-25T20:17:47
 file,ghost/master/dic/talk/aitalk.dicccaf3da14890ecebc7ecceda16912b18size=2251date=2021-10-19T21:08:06
