@@ -101,7 +101,7 @@ OnBoot
 		'\0\s[0]\1\s[50]'
 	}
 	--
-	if CurrentTime - GhostLastBoot < 60{
+	if CurrentTime - GhostLastBoot < 60 && story !=3 {
 		"\0\s[0]%(username)有漏掉什麽東西嗎？\w8\w8\w8\e"
 	}
 	else{
