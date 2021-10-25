@@ -122,7 +122,7 @@ surface0,1,7,17
 
 
 ///普通的说话动画，最后会回到原口型。
-surface0-17
+surface0-17,!16
 {
 1interval,talk,3
 1pattern1,201,10,overlayfast,0,0
@@ -248,26 +248,10 @@ element2,overlay,surface101.png,0,0
 element3,overlay,surface206.png,0,0
 element4,overlay,surface501.png,0,0
 }
-
 surface16
 {
-element1,overlay,surface301.png,0,0
-element2,overlay,surface101.png,0,0
-element3,overlay,surface206.png,0,0
-
-97interval,bind
-97pattern0,402,0,add,0,0
-98interval,bind
-98pattern0,601,0,add,0,0
-99interval,bind
-99pattern0,602,0,add,0,0
-101interval,bind
-101pattern0,603,0,add,0,0
-102interval,bind
-102option,background
-102pattern0,604,0,add,0,0
+element0,base,surface402.png,0,0
 }
-
 surface17
 {
 element1,overlay,surface301.png,0,0
