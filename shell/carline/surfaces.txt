@@ -15,6 +15,11 @@ collision4,58,183,129,256,foot
 98pattern0,601,0,add,0,0
 99interval,bind
 99pattern0,602,0,add,0,0
+101interval,bind
+101pattern0,603,0,add,0,0
+102interval,bind
+102option,background
+102pattern0,604,0,add,0,0
 }
 ///兔耳和生日帽
 
@@ -35,6 +40,11 @@ collision4,58,183,129,256,foot
 98pattern0,601,0,add,0,0
 99interval,bind
 99pattern0,602,0,add,0,0
+101interval,bind
+101pattern0,603,0,add,0,0
+102interval,bind
+102option,background
+102pattern0,604,0,add,0,0
 }
 
 ///竖起手指的站立姿势
@@ -54,6 +64,11 @@ collision4,58,183,129,256,foot
 98pattern0,601,0,add,0,0
 99interval,bind
 99pattern0,602,0,add,0,0
+101interval,bind
+101pattern0,603,0,add,0,0
+102interval,bind
+102option,background
+102pattern0,604,0,add,0,0
 }
 
 ///双手握拳的站立姿势
@@ -73,6 +88,11 @@ collision4,58,183,129,256,foot
 98pattern0,601,0,add,0,0
 99interval,bind
 99pattern0,602,0,add,0,0
+101interval,bind
+101pattern0,603,0,add,0,0
+102interval,bind
+102option,background
+102pattern0,604,0,add,0,0
 }
 
 
@@ -241,6 +261,11 @@ element3,overlay,surface206.png,0,0
 98pattern0,601,0,add,0,0
 99interval,bind
 99pattern0,602,0,add,0,0
+101interval,bind
+101pattern0,603,0,add,0,0
+102interval,bind
+102option,background
+102pattern0,604,0,add,0,0
 }
 
 surface17
