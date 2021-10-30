@@ -25,6 +25,7 @@ sakura.bindgroup99.name,耳朵,兔耳
 sakura.bindgroup100.name,耳朵,狐狸
 sakura.bindgroup101.name,眼镜,百鬼
 sakura.bindgroup102.name,发型,马尾
+sakura.bindgroup103.name,装饰,蝙蝠翅膀
 
 
 sakura.balloon.alignment,none

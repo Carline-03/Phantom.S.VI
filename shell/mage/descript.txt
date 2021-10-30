@@ -1,7 +1,7 @@
 ﻿charset,UTF-8
-name,Phantom.S
+name,法师服
 type,shell
-id,master
+id,mage
 craftmanw,２０２０紫堂幻生贺制作组
 
 
