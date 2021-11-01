@@ -1,0 +1,25 @@
+on:
+  push
+
+name: auto check
+
+jobs:
+  check:
+    name: auto check
+    runs-on: windows-latest
+    steps:
+    - name: disable auto crlf
+      uses: steve02081504/disable-autocrlf@v1
+      with:
+        fuck-auto-CRLF: true
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: shiori-check
+      uses: Taromati2/yaya-CI-check@v2
+      with:
+        shiori-path: .\ghost\master\shiori\yaya.dll
+    - name: updates build
+      uses: Taromati2/ukagaka-mirror-md5-CI-build@v3
+      with:
+        dir-path: .
+        build-mode: other
