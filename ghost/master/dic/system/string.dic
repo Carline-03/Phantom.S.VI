@@ -22,12 +22,10 @@ On_vanishbutton.caption
 On_shellrootbutton.caption
 {
 	'换套衣服'
-	'更换shell'
 }
 
 On_balloonrootbutton.caption
 {
-	'更换说话的气泡'
 	'换对话框'
 }
 
@@ -98,27 +96,6 @@ On_otherghostname
 		else; _i = -1
 	}
 	ghostexcount = ARRAYSIZE(ghostexlist)
-}
-
-//---- SHIORI 関連情報 ------------------------------------------------------------------
-On_version
-{
-	GETSETTING(AYAINFO_VERSION)
-}
-
-On_craftman
-{
-	'umeici'
-}
-
-On_craftmanw
-{
-	'梅市'
-}
-
-On_name
-{
-	'AYA'
 }
 
 //---- Owned SSTP 用 uniqueid 取得 ------------------------------------------------------
