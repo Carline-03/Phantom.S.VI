@@ -48,7 +48,7 @@ MouseMoveSakura
 				elseif love >= 200{
 					'\0\s[11]什么？！\w8\w8\w4我头上沾满了落叶？\w8\w8\w8\n/
 					\s[0]啊、\w8大概是刚刚打怪时不小心摔到草丛里弄到的。\w8\w8\w8\n\n/
-					\__q[Onmousechoice,摔倒了吗，\w8\w4不要紧吧]☆摔倒了吗，\w8\w4不要紧吧\__q\n/
+					\__q[Onmousechoice,摔到了吗不要紧吧]☆摔倒了吗，\w8\w4不要紧吧\__q\n/
 					\__q[Onmousechoice,今天打怪还顺利吗]☆今天打怪还顺利吗\__q'
 				}
 				elseif love >= 100{
@@ -268,7 +268,7 @@ MouseDoubleClickSakura
 		elseif love >= 200{
 			'\0\s[11]什么？！\w8\w8\w4我头上沾满了落叶？\w8\w8\w8\n/
 			\s[0]啊、\w8大概是刚刚打怪时不小心摔到草丛里弄到的。\w8\w8\w8\n\n/
-			\__q[Onmousechoice,摔倒了吗，\w8\w4不要紧吧]☆摔倒了吗，\w8\w4不要紧吧\__q\n/
+			\__q[Onmousechoice,摔到了吗不要紧吧]☆摔倒了吗，\w8\w4不要紧吧\__q\n/
 			\__q[Onmousechoice,今天打怪还顺利吗]☆今天打怪还顺利吗\__q'
 		}
 		elseif love >= 100{
