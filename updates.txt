@@ -9,7 +9,7 @@ file,ghost/master/dic/system/bootend.dicef5cd90d7d553861f0080ce9bdc9cab6size=6
 file,ghost/master/dic/system/etc.diccd7c4a4661e63fbe795cd9cf9c9ca613size=10170date=1969-12-31T23:59:59
 file,ghost/master/dic/system/ghosttalk.dic37e7b4c324d802e5a9f504d828e81cf1size=1588date=1969-12-31T23:59:59
 file,ghost/master/dic/system/menu.dic38ddb718ddb0101b113f8d83c0fdb6b3size=2668date=1969-12-31T23:59:59
-file,ghost/master/dic/system/mouse.diced4db8b9fe0ad8757e975ae43dfdebd8size=24165date=1969-12-31T23:59:59
+file,ghost/master/dic/system/mouse.dicd458db0ffb7d34fd57183523cccf2be5size=24147date=1969-12-31T23:59:59
 file,ghost/master/dic/system/qa.dicd3cb0587970789f0b47e4d91797662bbsize=273date=1969-12-31T23:59:59
 file,ghost/master/dic/system/story.dic89cc03b3d3abbda4606604cc2fa744d3size=44146date=1969-12-31T23:59:59
 file,ghost/master/dic/system/string.dic9b5dcbfe177208b2cc2967c7f1c77d48size=1959date=1969-12-31T23:59:59
