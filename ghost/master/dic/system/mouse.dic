@@ -399,7 +399,7 @@ MouseDoubleClickSakura
 		}
 		elseif love >= 300{
 			'\0\s[7]战斗结束后我有检查，\w8\w4眼镜没有破损啊…\n\n/
-			\__q[Onmousechoice,没事的，\w8\w4只是有点歪掉，\w8\w4帮你扶正。\w8\w8\w8圆框眼镜很可爱哦]☆没事的，\w8\w4只是有点歪掉，\w8\w4帮你扶正。\w8\w8\w8圆框眼镜很可爱哦\__q\n/
+			\__q[Onmousechoice,圆框眼镜很可爱哦]☆没事的，\w8\w4只是有点歪掉，\w8\w4帮你扶正。\w8\w8\w8圆框眼镜很可爱哦\__q\n/
 			\__q[Onmousechoice,幻有没有想过尝试别的眼镜款式]☆幻有没有想过尝试别的眼镜款式\__q'
 		}
 		elseif love >= 100{
