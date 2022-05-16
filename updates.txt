@@ -10,7 +10,7 @@ file,ghost/master/dic/system/etc.diccd7c4a4661e63fbe795cd9cf9c9ca613size=10170
 file,ghost/master/dic/system/ghosttalk.dic37e7b4c324d802e5a9f504d828e81cf1size=1588date=2012-12-21T00:00:00
 file,ghost/master/dic/system/menu.dic38ddb718ddb0101b113f8d83c0fdb6b3size=2668date=2012-12-21T00:00:00
 file,ghost/master/dic/system/mouse.dic020f1545aceed42bab793f42f85b97adsize=24084date=2012-12-21T00:00:00
-file,ghost/master/dic/system/story.dic4b57588d13a59ffceca004e064fcbca3size=44138date=2012-12-21T00:00:00
+file,ghost/master/dic/system/story.dicd38fa7f03786d4657ce80cb5563c7ad2size=44123date=2012-12-21T00:00:00
 file,ghost/master/dic/system/string.dic9b5dcbfe177208b2cc2967c7f1c77d48size=1959date=2012-12-21T00:00:00
 file,ghost/master/dic/system/time.dic397040491ab555de04c1ce18d983fd04size=2072date=2012-12-21T00:00:00
 file,ghost/master/dic/talk/aitalk.dicccaf3da14890ecebc7ecceda16912b18size=2251date=2012-12-21T00:00:00
