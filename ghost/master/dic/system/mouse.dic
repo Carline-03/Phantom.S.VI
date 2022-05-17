@@ -197,7 +197,7 @@ MouseMoveSakura
 					\s[14]这个羁绊不足指的是，\w8\w4唔…\w4…\w8\w8'
 				}
 			}
-			elseif reference4 == 'all'{
+			elseif reference4 == 'all' && story == 3 {
 				if click >=10{
 					"\0\t【小斯巴达身上的元力印记逐渐变得明显。\w8\w8\w8】\n/
 					【一股熟悉的力量从玩偶的体内涌现出来——】\w8\w8\n/
@@ -418,7 +418,7 @@ MouseDoubleClickSakura
 			\s[14]这个羁绊不足指的是，\w8\w4唔…\w4…\w8\w8'
 		}
 	}
-	elseif reference4 == 'all'{
+	elseif reference4 == 'all' && story ==3{
 		if click >=10{
 			"\0\t【小斯巴达身上的元力印记逐渐变得明显。\w8\w8\w8】\n/
 			【一股熟悉的力量从玩偶的体内涌现出来——】\w8\w8\n/
