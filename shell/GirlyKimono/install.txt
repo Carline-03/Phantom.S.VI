@@ -1,0 +1,4 @@
+﻿Charset,UTF-8
+type,shell
+name,女性和服
+directory,GirlyKimono
