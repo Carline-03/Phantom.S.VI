@@ -51,27 +51,27 @@ OnAiTalk
 			我来晚了。\w8\w8\w8今天也会努力完成工作的，\w8\w4您的电脑就交给我吧。\w8\w8\w8\n\n/
 			\__q[Onstory1,这是发生什么了]☆这是发生什么了，\w8\w4你看起来很低落\__q"
 		}
-		elseif mode == 7{
+		elseif story == 7{
 			lastTalk = Talk7
 			lastTalk
 		}
-		elseif mode == 6{
+		elseif story == 6{
 			lastTalk = Talk6
 			lastTalk
 		}
-		elseif mode == 5{
+		elseif story == 5{
 			lastTalk = Talk5
 			lastTalk
 		}
-		elseif mode == 4{
+		elseif story == 4{
 			lastTalk = Talk4
 			lastTalk
 		}
-		elseif mode == 3{
+		elseif story == 3{
 			lastTalk = Talk3
 			lastTalk
 		}
-		elseif mode == 2{
+		elseif story == 2{
 			lastTalk = Talk2
 			lastTalk
 		}
