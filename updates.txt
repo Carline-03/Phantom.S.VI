@@ -13,7 +13,7 @@ file,ghost/master/dic/system/mouse.dic12d4dbfcd318e303444107aaf0818ec3size=241
 file,ghost/master/dic/system/story.dice0651c51f017c88d721f2a7528e8445dsize=44090date=2012-12-21T00:00:00
 file,ghost/master/dic/system/string.dic9b5dcbfe177208b2cc2967c7f1c77d48size=1959date=2012-12-21T00:00:00
 file,ghost/master/dic/system/time.dic397040491ab555de04c1ce18d983fd04size=2072date=2012-12-21T00:00:00
-file,ghost/master/dic/talk/aitalk.dicccaf3da14890ecebc7ecceda16912b18size=2251date=2012-12-21T00:00:00
+file,ghost/master/dic/talk/aitalk.dic963a7b2264f0de4de7868064ace3d35esize=2257date=2012-12-21T00:00:00
 file,ghost/master/dic/talk/aitalk1.dic149a55317c0035944bb5c809333e2888size=7015date=2012-12-21T00:00:00
 file,ghost/master/dic/talk/aitalk2.dic6199cac0452197aab7e174e857e8b177size=3399date=2012-12-21T00:00:00
 file,ghost/master/dic/talk/aitalk3.dic052c50268061b5f4592870f579f67817size=2743date=2012-12-21T00:00:00
